@@ -1,0 +1,22 @@
+import random
+
+def roll_dice():
+    return random.randint(1, 6)
+def main():
+    print("Welcome to the Dice Roll Simulator!")
+    
+    while True:
+        user_input = input("\nPress 'r' to roll the dice or 'exit' to quit: ").strip().lower()
+        
+        if user_input == "r":
+            # Roll the dice and display the result
+            result = roll_dice()
+            print(f"\nYou rolled a {result}!")
+        elif user_input == "exit":
+            print("Goodbye! Thanks for playing!")
+            break
+        else:
+            print("Invalid input. Please type 'r' to roll or 'exit' to quit.")
+
+    if_name_ == "_main_"
+main()

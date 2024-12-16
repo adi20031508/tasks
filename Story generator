@@ -1,0 +1,49 @@
+import random
+characters = ["a handsome prince", "a brave prince", "a wise prince", "a kind prince", "a intelligent price"]
+settings = ["in a beautiful palace",  "in a sprawling kingdom", "in a huge castle", "on a high mountain","in a castle built on countryside"]
+goals = ["find a hidden truth", "rescue a kidnapped princess","finding the vicious fairy", "break an ancient curse", "defeat an evil beats", "protect the kingdom"]
+obstacles = [
+    "but the prince were pursued by dangerous beasts",
+    "but the prince treacherous storms and wild beasts",
+    "but they got lost and ran out of supplies",
+    "but a rival was trying to sabotage them"
+]
+twists = [
+    "They discovered that his loyal right hand man was secretly working for the enemy.",
+    "They learned a shocking truth about the kingdoms past.",
+    "They found an ancient map leading to a place where vicious fairy lived.",
+    "They were betrayed by someone they trusted.",
+    "They uncovered a hidden power within themselves.",
+    "They found a place in a forest"
+]
+endings = [
+    "After an epic battle, the prince achieved his goal and returned his kingdom with his princess.",
+    "Despite the challenges, he succeeded but chose to keep his adventure a secret.",
+    "he failed to achieve his goal but discovered something even more valuable.",
+    "he realized the journey itself was the real treasure and decided to continue finding ths truths.",
+]
+def generate_large_story():
+    story = []
+    character = random.choice(characters)
+    setting = random.choice(settings)
+    story.append(f"Once upon a time, {character} lived {setting}.")
+    goal = random.choice(goals)
+    obstacle = random.choice(obstacles)
+    story.append(f"Their mission was to {goal}, {obstacle}.")
+    for _ in range(2):  
+        twist = random.choice(twists)
+        story.append(f"{twist}")
+    ending = random.choice(endings)
+    story.append(f"{ending}")
+    return " ".join(story)
+def main():
+    print("Welcome to the Long Story Generator!")
+    while True:
+        print("\nHere's your story:")
+        print(generate_large_story())
+        user_input = input("\nWould you like another story? (yes/no): ").strip().lower()
+        if user_input not in ["yes", "y"]:
+            print("Goodbye! Thanks for reading!")
+            break
+    if__name__ == "__main__"
+    

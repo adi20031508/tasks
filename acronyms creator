@@ -1,0 +1,21 @@
+def create_acronym(phrase):
+    #First split
+    words = phrase.split()
+    # First letter of word and capitalize it
+    acronym = "".join(word[0].upper() for word in words if word.isalpha())
+    return acronym
+def main():
+    print("Welcome to the Acronym Creator!")
+    while True:
+        #get the phrase
+        phrase = input("\nEnter a phrase or sentence to create its acronym (or type 'exit' to quit): ")
+        # Exit the program
+        if phrase.lower() == "exit":
+            print("Goodbye! Thanks for using the Acronym Creator.")
+            break
+        # Generate the acronym
+        acronym = create_acronym(phrase)
+        print(f"The acronym for '{phrase}' is: {acronym}")
+
+    if_name_ == "_main_"
+main()
